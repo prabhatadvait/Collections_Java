@@ -1,0 +1,86 @@
+ "A collection is an object that represents a group of objects. A collections framework is a
+  unified architecture for representing and manipulating collections.”
+
+  Collection Interfaces
+  In Java, an interface specifies a contract that must be fulfilled by any class that implements it.
+  This means the implementing class must provide concrete implementations for all the methods declared in the interface.
+The diagram:-
+  At the root of the Java Collections Framework is the Iterable interface, which lets you iterate over the elements of
+   a collection.
+  The Collection interface extends the Iterable interface. This means it inherits the properties and behavior of the
+  Iterable interface and adds its own behavior for adding, removing, and retrieving elements.
+
+  Specific interfaces such as List, Set, and Queue further extend the Collection interface. Each of these interfaces
+  has other classes implementing their methods. For example, ArrayList is a popular implementation of the List interface
+  , HashSet implements the Set interface, and so on.
+
+  The Map interface is part of the Java Collections Framework, but it does not extend the Collection interface,
+  unlike the others mentioned above.
+
+  All the interfaces and classes in this framework are part of the java.util package.
+
+  Note: A common source of confusion in the Java Collections Framework revolves around the difference between
+  Collection and Collections. Collection is an interface in the framework, while Collections is a utility class.
+
+1.Lists
+  A List is an ordered or sequential collection of elements.
+  A List is internally supported by either an array or a linked list, depending on the type of implementation.
+  For example, an ArrayList uses an array, while a LinkedList uses a linked list internally.
+
+2.Sets
+  A Set is a type of collection that does not allow duplicate elements and represents the concept of a mathematical set.
+  A Set is internally backed by a HashMap. Depending on the implementation type, it is supported by either a HashMap,
+  LinkedHashMap, or a TreeMap
+
+  HashSet: Order is not guaranteed, and elements can be placed in any position.
+  LinkedHashSet: This implementation maintains the insertion order, so you can retrieve the elements in the same order
+  they were inserted.
+  TreeSet: Elements are inserted based on their natural order.
+
+3.Queues
+  A Queue is a linear collection of elements used to hold multiple items before processing, usually following the
+  FIFO (first-in-first-out) order. This means elements are added at one end and removed from the other.
+  The internal workings of a Queue can differ based on its specific implementation.
+
+  LinkedList – uses a doubly-linked list to store elements, which means you can traverse both forward and backward,
+  allowing for flexible operations.
+  PriorityQueue – is internally backed by a binary heap, which is very efficient for retrieval operations.
+  ArrayDeque – is implemented using an array that expands or shrinks as elements are added or removed. Here,
+  elements can be added or removed from both ends of the queue.
+
+4.Maps
+  A Map represents a collection of key-value pairs, with each key mapping to a single value.
+  Although Map is part of the Java Collection framework, it does not extend the java.util.Collection interface.
+
+  A Map works internally using a HashTable based on the concept of hashing.
+  HashMap – the insertion order is not guaranteed as they are determined based on the concept of hashing.
+  LinkedHashMap - order is there.
+  TreeMap- order is there.
+
+5.Collections Utility Class
+  The Collections utility class has several useful static methods that let you perform commonly used operations
+  on the elements of a collection.
+
+  Sorting: Collections.sort(List<T>) – this method is used to sort the elements of a list in ascending order.
+
+  Searching: Collections.binarySearch(List<T>, key) – this method is used to search for a specific element in a sorted
+  list and return its index.
+
+  Reverse order: Collections.reverse(List<T>) – this method is used to reverse the order of elements in a list.
+
+  Min/Max Operations: Collections.min(Collection<T>) and Collections.max(Collection<T>) – these methods are used to
+  find the minimum and maximum elements in a collection, respectively.
+
+  Synchronization: Collections.synchronizedList(List<T>) – this method is used to make a list thread-safe by
+  synchronizing it.
+
+  Unmodifiable Collections: Collections.unmodifiableList(List<T>) – this method is used to create a read-only
+  view of a list, preventing modifications.
+
+  A Few More Useful Collections Methods (Optional Learning)
+  Method	Description
+  Collections.frequency(list, val)	Counts how many times val occurs in list
+  Collections.shuffle(list)	Randomly shuffles the list
+  Collections.fill(list, val)	Fills list with a specific value
+  Collections.copy(dest, src)	Copies elements from src to dest
+  Collections.swap(list, i, j)	Swaps two elements at positions i and j
